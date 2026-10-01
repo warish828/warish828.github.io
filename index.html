@@ -1,103 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Warish — personal developer portfolio.">
-  <title>Warish | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Warish Community — coding, Linux, Termux, projects and tutorials.">
+<title>Warish Community | Code • Build • Share</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="navbar">
-    <a class="logo" href="#home">Warish<span>.</span></a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<div class="grid"></div><div class="orb one"></div><div class="orb two"></div>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
-        <h1>Hi, I'm <span>Warish</span>.</h1>
-        <p class="tagline">Building ideas with code.</p>
-        <p class="intro">I enjoy learning, creating useful projects, and turning ideas into simple digital experiences.</p>
-        <div class="buttons">
-          <a class="btn primary" href="#projects">View Projects</a>
-          <a class="btn secondary" href="#contact">Contact Me</a>
-        </div>
-      </div>
-      <div class="hero-card">
-        <div class="code-window">
-          <div class="dots"><i></i><i></i><i></i></div>
-          <pre><code><span class="pink">const</span> developer = {
-  name: <span class="green">"Warish"</span>,
-  passion: <span class="green">"building"</span>,
-  mindset: <span class="green">"always learning"</span>
-};</code></pre>
-        </div>
-      </div>
-    </section>
+<header class="nav">
+  <a class="brand" href="#home">WARISH<span>_</span></a>
+  <button id="menuBtn" aria-label="Menu">☰</button>
+  <nav id="navLinks">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a>
+    <a href="#community">Community</a><a href="#contact">Contact</a>
+  </nav>
+</header>
 
-    <section id="about" class="section">
-      <p class="section-label">01 — ABOUT</p>
-      <h2>Turning curiosity into <span>creation.</span></h2>
-      <p class="section-text">I'm Warish, a learner and creator who likes working with technology and code. I'm focused on improving my skills, experimenting with new ideas, and building projects that are useful and easy to use.</p>
-    </section>
+<main>
+<section id="home" class="hero section">
+  <div class="reveal">
+    <p class="eyebrow">WELCOME TO THE COMMUNITY</p>
+    <h1>Code. Build.<br><span>Share.</span></h1>
+    <p class="hero-text">A place for followers who love coding, Linux, Termux, experiments, useful projects and learning something new every day.</p>
+    <div class="buttons">
+      <a class="btn primary" href="https://github.com/warish828" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn secondary" href="https://www.instagram.com/yamr.ajwarishhh/" target="_blank" rel="noopener">Instagram ↗</a>
+    </div>
+    <div class="stats"><div><b>01</b><small>Build</small></div><div><b>02</b><small>Learn</small></div><div><b>03</b><small>Share</small></div></div>
+  </div>
+  <div class="terminal reveal">
+    <div class="terminal-top"><i></i><i></i><i></i><small>warish@community</small></div>
+    <div class="terminal-body">
+      <p><b>$</b> whoami</p><p class="accent">Warish — Developer</p>
+      <p><b>$</b> interests</p><p>Python · Web · Linux · Termux</p>
+      <p><b>$</b> status</p><p class="success">● Building something new...</p>
+      <p><b>$</b> <span class="cursor">_</span></p>
+    </div>
+  </div>
+</section>
 
-    <section id="skills" class="section">
-      <p class="section-label">02 — SKILLS</p>
-      <h2>Things I <span>work with.</span></h2>
-      <div class="skill-grid">
-        <div class="skill">Python</div>
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">Git</div>
-        <div class="skill">Linux / Termux</div>
-      </div>
-    </section>
+<section id="about" class="section">
+  <div class="head reveal"><p class="eyebrow">01 / ABOUT</p><h2>Welcome, builders.</h2><p>Follow along, learn together and turn ideas into real projects.</p></div>
+  <div class="cards three">
+    <article class="card reveal"><div class="icon">💻</div><h3>Coding</h3><p>Python, HTML, CSS and JavaScript projects with practical examples.</p></article>
+    <article class="card reveal"><div class="icon">🐧</div><h3>Linux & Termux</h3><p>Terminal workflows, customization, development and useful commands.</p></article>
+    <article class="card reveal"><div class="icon">🚀</div><h3>Experiments</h3><p>Small ideas, prototypes and experiments shared with the community.</p></article>
+  </div>
+</section>
 
-    <section id="projects" class="section">
-      <p class="section-label">03 — PROJECTS</p>
-      <h2>Selected <span>work.</span></h2>
-      <div class="project-grid">
-        <article class="project-card">
-          <div class="project-number">01</div>
-          <h3>Personal AI Assistant</h3>
-          <p>A Python-based assistant project focused on useful commands, automation, and a clean command-line experience.</p>
-          <span class="project-tag">Python</span>
-        </article>
-        <article class="project-card">
-          <div class="project-number">02</div>
-          <h3>Web Projects</h3>
-          <p>Responsive web experiments built to practice modern HTML, CSS, JavaScript, and user-friendly design.</p>
-          <span class="project-tag">Web</span>
-        </article>
-        <article class="project-card">
-          <div class="project-number">03</div>
-          <h3>More Coming Soon</h3>
-          <p>I'm continuously learning and building. New projects will be added here as they are completed.</p>
-          <span class="project-tag">Learning</span>
-        </article>
-      </div>
-    </section>
+<section id="projects" class="section">
+  <div class="head reveal"><p class="eyebrow">02 / PROJECTS</p><h2>Things I'm building.</h2><p>Replace these cards with your latest projects whenever you want.</p></div>
+  <div class="cards three">
+    <article class="project card reveal"><span>WEB</span><h3>Developer Portfolio</h3><p>A clean personal portfolio built with HTML, CSS and JavaScript.</p><a href="https://github.com/warish828" target="_blank">View on GitHub ↗</a></article>
+    <article class="project card reveal"><span>PYTHON</span><h3>AI Assistant</h3><p>A Python assistant project with useful commands and automation ideas.</p><a href="https://github.com/warish828" target="_blank">View projects ↗</a></article>
+    <article class="project card reveal"><span>COMMUNITY</span><h3>Coming Soon</h3><p>New tutorials, experiments and community projects will appear here.</p><a href="#contact">Stay connected →</a></article>
+  </div>
+</section>
 
-    <section id="contact" class="section contact">
-      <p class="section-label">04 — CONTACT</p>
-      <h2>Let's build something <span>great.</span></h2>
-      <p class="section-text">Have an idea, project, or simply want to connect? Feel free to reach out.</p>
-      <a class="email" href="mailto:fff726417@gmail.com">fff726417@gmail.com</a>
-    </section>
-  </main>
+<section id="community" class="section">
+  <div class="community card reveal">
+    <p class="eyebrow">03 / COMMUNITY</p><h2>You're part of the build.</h2>
+    <p>Have an idea, question or project suggestion? Send it over and let's build useful things.</p>
+    <div class="buttons"><a class="btn primary" href="mailto:fff726417@gmail.com">Send a message</a><a class="btn secondary" href="https://github.com/warish828" target="_blank">Follow on GitHub</a></div>
+  </div>
+</section>
 
-  <footer>
-    <p>© <span id="year"></span> Warish. Built with code.</p>
-  </footer>
+<section id="contact" class="section">
+  <div class="head reveal"><p class="eyebrow">04 / CONNECT</p><h2>Find me online.</h2></div>
+  <div class="socials">
+    <a class="social reveal" href="https://github.com/warish828" target="_blank"><b>GitHub</b><small>@warish828 ↗</small></a>
+    <a class="social reveal" href="https://www.instagram.com/yamr.ajwarishhh/" target="_blank"><b>Instagram</b><small>@yamr.ajwarishhh ↗</small></a>
+    <a class="social reveal" href="mailto:fff726417@gmail.com"><b>Email</b><small>fff726417@gmail.com ↗</small></a>
+  </div>
+</section>
+</main>
 
-  <script src="script.js"></script>
+<footer><p>© <span id="year"></span> Warish. Built with code & curiosity.</p><a href="#home">Back to top ↑</a></footer>
+<script src="script.js"></script>
 </body>
 </html>
