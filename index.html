@@ -1,84 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Warish Community — coding, Linux, Termux, projects and tutorials.">
-<title>Warish Community | Code • Build • Share</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Warish Cyber Security - Defensive cybersecurity tools and learning resources.">
+  <title>Warish Cyber Security</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="grid"></div><div class="orb one"></div><div class="orb two"></div>
-
-<header class="nav">
-  <a class="brand" href="#home">WARISH<span>_</span></a>
-  <button id="menuBtn" aria-label="Menu">☰</button>
-  <nav id="navLinks">
-    <a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a>
-    <a href="#community">Community</a><a href="#contact">Contact</a>
+<header>
+  <nav class="nav">
+    <a class="logo" href="#home">WARISH<span>_CYBER</span></a>
+    <button class="menu" id="menuBtn">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#tools">Tools</a>
+      <a href="#learn">Learn</a>
+      <a href="#about">About</a>
+    </div>
   </nav>
 </header>
 
 <main>
-<section id="home" class="hero section">
-  <div class="reveal">
-    <p class="eyebrow">WELCOME TO THE COMMUNITY</p>
-    <h1>Code. Build.<br><span>Share.</span></h1>
-    <p class="hero-text">A place for followers who love coding, Linux, Termux, experiments, useful projects and learning something new every day.</p>
-    <div class="buttons">
-      <a class="btn primary" href="https://github.com/warish828" target="_blank" rel="noopener">GitHub ↗</a>
-      <a class="btn secondary" href="https://www.instagram.com/yamr.ajwarishhh/" target="_blank" rel="noopener">Instagram ↗</a>
-    </div>
-    <div class="stats"><div><b>01</b><small>Build</small></div><div><b>02</b><small>Learn</small></div><div><b>03</b><small>Share</small></div></div>
+<section class="hero" id="home">
+  <div>
+    <p class="eyebrow">DEFENSIVE SECURITY PLATFORM</p>
+    <h1>WARISH<br><span>CYBER SECURITY</span></h1>
+    <p class="hero-text">Simple, privacy-conscious cybersecurity tools for learning, testing, and protecting your own systems.</p>
+    <a class="btn" href="#tools">Explore Tools →</a>
   </div>
-  <div class="terminal reveal">
-    <div class="terminal-top"><i></i><i></i><i></i><small>warish@community</small></div>
-    <div class="terminal-body">
-      <p><b>$</b> whoami</p><p class="accent">Warish — Developer</p>
-      <p><b>$</b> interests</p><p>Python · Web · Linux · Termux</p>
-      <p><b>$</b> status</p><p class="success">● Building something new...</p>
-      <p><b>$</b> <span class="cursor">_</span></p>
-    </div>
+  <div class="terminal">
+    <div class="dots">● ● ●</div>
+    <pre>$ whoami
+warish@cyber:~$ security_check
+[+] Password analyzer
+[+] Hash generator
+[+] Base64 tools
+[+] URL analyzer
+[+] Public IP lookup
+[✓] Defensive mode active</pre>
   </div>
 </section>
 
-<section id="about" class="section">
-  <div class="head reveal"><p class="eyebrow">01 / ABOUT</p><h2>Welcome, builders.</h2><p>Follow along, learn together and turn ideas into real projects.</p></div>
-  <div class="cards three">
-    <article class="card reveal"><div class="icon">💻</div><h3>Coding</h3><p>Python, HTML, CSS and JavaScript projects with practical examples.</p></article>
-    <article class="card reveal"><div class="icon">🐧</div><h3>Linux & Termux</h3><p>Terminal workflows, customization, development and useful commands.</p></article>
-    <article class="card reveal"><div class="icon">🚀</div><h3>Experiments</h3><p>Small ideas, prototypes and experiments shared with the community.</p></article>
+<section class="stats">
+  <div><b>06</b><span>TOOLS</span></div>
+  <div><b>100%</b><span>EDUCATIONAL</span></div>
+  <div><b>FREE</b><span>TO USE</span></div>
+</section>
+
+<section id="tools">
+  <div class="section-head">
+    <p class="eyebrow">SECURITY TOOLKIT</p>
+    <h2>Useful <span>Tools</span></h2>
+  </div>
+
+  <div class="grid">
+    <article class="card">
+      <h3>🔐 Password Strength</h3>
+      <p>Check basic password strength locally in your browser.</p>
+      <input id="password" type="password" placeholder="Enter a test password">
+      <button class="btn small" id="checkPassword">Check</button>
+      <div id="passwordResult" class="result"></div>
+    </article>
+
+    <article class="card">
+      <h3># Hash Generator</h3>
+      <p>Generate SHA-256 or SHA-512 hashes in your browser.</p>
+      <input id="hashInput" placeholder="Text to hash">
+      <select id="hashAlgorithm">
+        <option value="SHA-256">SHA-256</option>
+        <option value="SHA-512">SHA-512</option>
+      </select>
+      <button class="btn small" id="generateHash">Generate</button>
+      <div id="hashResult" class="result mono"></div>
+    </article>
+
+    <article class="card">
+      <h3>🔤 Base64</h3>
+      <p>Encode or decode text using Base64.</p>
+      <textarea id="base64Input" placeholder="Enter text"></textarea>
+      <div class="actions">
+        <button class="btn small" id="encode64">Encode</button>
+        <button class="btn small alt" id="decode64">Decode</button>
+      </div>
+      <div id="base64Result" class="result mono"></div>
+    </article>
+
+    <article class="card">
+      <h3>🌐 URL Analyzer</h3>
+      <p>Inspect the structure of a URL without visiting it.</p>
+      <input id="urlInput" placeholder="https://example.com/path">
+      <button class="btn small" id="analyzeUrl">Analyze</button>
+      <div id="urlResult" class="result"></div>
+    </article>
+
+    <article class="card">
+      <h3>🛡️ Security Headers</h3>
+      <p>Learn about common browser security headers.</p>
+      <div class="info-list">
+        <span>Content-Security-Policy</span>
+        <span>Strict-Transport-Security</span>
+        <span>X-Content-Type-Options</span>
+        <span>Referrer-Policy</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>📡 My Public IP</h3>
+      <p>Check the public IP visible to an external IP service.</p>
+      <button class="btn small" id="getIp">Check IP</button>
+      <div id="ipResult" class="result mono"></div>
+    </article>
   </div>
 </section>
 
-<section id="projects" class="section">
-  <div class="head reveal"><p class="eyebrow">02 / PROJECTS</p><h2>Things I'm building.</h2><p>Replace these cards with your latest projects whenever you want.</p></div>
-  <div class="cards three">
-    <article class="project card reveal"><span>WEB</span><h3>Developer Portfolio</h3><p>A clean personal portfolio built with HTML, CSS and JavaScript.</p><a href="https://github.com/warish828" target="_blank">View on GitHub ↗</a></article>
-    <article class="project card reveal"><span>PYTHON</span><h3>AI Assistant</h3><p>A Python assistant project with useful commands and automation ideas.</p><a href="https://github.com/warish828" target="_blank">View projects ↗</a></article>
-    <article class="project card reveal"><span>COMMUNITY</span><h3>Coming Soon</h3><p>New tutorials, experiments and community projects will appear here.</p><a href="#contact">Stay connected →</a></article>
+<section id="learn" class="learn">
+  <div class="section-head">
+    <p class="eyebrow">LEARN SECURITY</p>
+    <h2>Build better <span>security habits</span></h2>
+  </div>
+  <div class="learn-grid">
+    <div><b>01</b><h3>Strong Authentication</h3><p>Use unique passwords and multi-factor authentication where available.</p></div>
+    <div><b>02</b><h3>Keep Software Updated</h3><p>Install security updates and remove software you no longer need.</p></div>
+    <div><b>03</b><h3>Verify Links</h3><p>Inspect suspicious URLs and avoid entering credentials on untrusted pages.</p></div>
   </div>
 </section>
 
-<section id="community" class="section">
-  <div class="community card reveal">
-    <p class="eyebrow">03 / COMMUNITY</p><h2>You're part of the build.</h2>
-    <p>Have an idea, question or project suggestion? Send it over and let's build useful things.</p>
-    <div class="buttons"><a class="btn primary" href="mailto:fff726417@gmail.com">Send a message</a><a class="btn secondary" href="https://github.com/warish828" target="_blank">Follow on GitHub</a></div>
-  </div>
+<section class="notice">
+  <strong>⚠ Safety Notice</strong>
+  <p>These tools are intended for education, defensive testing, and systems you own or have permission to assess. Do not use them for unauthorized access or abuse.</p>
 </section>
 
-<section id="contact" class="section">
-  <div class="head reveal"><p class="eyebrow">04 / CONNECT</p><h2>Find me online.</h2></div>
-  <div class="socials">
-    <a class="social reveal" href="https://github.com/warish828" target="_blank"><b>GitHub</b><small>@warish828 ↗</small></a>
-    <a class="social reveal" href="https://www.instagram.com/yamr.ajwarishhh/" target="_blank"><b>Instagram</b><small>@yamr.ajwarishhh ↗</small></a>
-    <a class="social reveal" href="mailto:fff726417@gmail.com"><b>Email</b><small>fff726417@gmail.com ↗</small></a>
-  </div>
+<section id="about" class="about">
+  <p class="eyebrow">ABOUT</p>
+  <h2>Warish Cyber Security</h2>
+  <p>A lightweight educational cybersecurity project designed to make common security concepts easier to understand and practice.</p>
 </section>
 </main>
 
-<footer><p>© <span id="year"></span> Warish. Built with code & curiosity.</p><a href="#home">Back to top ↑</a></footer>
+<footer>
+  <p>© <span id="year"></span> Warish Cyber Security</p>
+  <p>Defensive • Educational • Responsible</p>
+</footer>
+
 <script src="script.js"></script>
 </body>
 </html>
